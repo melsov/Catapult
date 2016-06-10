@@ -23,7 +23,7 @@ public class TrophyShelf : MonoBehaviour {
 
 	private IEnumerator achieve(Trophy t) {
 		achPanel.show (t);
-		Time.timeScale = .1f;
+		Time.timeScale = .15f;
 		yield return new WaitForSeconds (.4f);
 		achPanel.hide ();
 		Time.timeScale = 1f;

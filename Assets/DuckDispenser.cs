@@ -31,13 +31,13 @@ public class DuckDispenser : MonoBehaviour {
 	}
 
 	public void increaseFrequency() {
-		frequencyMultiplier = Mathf.Max (.3f, frequencyMultiplier * 0.95f);
+		frequencyMultiplier = Mathf.Max (.05f, frequencyMultiplier * 0.96f);
 	}
 
 	private void shootttt() {
 		Duck d = Instantiate<Duck> (originalDuck);
 		d.transform.position = transform.position;
-		d.speed /= frequencyMultiplier;
+        //d.speed = Mathf.Min(55f, d.speed / frequencyMultiplier);
 		d.gameObject.SetActive (true);
 
 	}
