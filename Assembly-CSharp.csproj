@@ -49,8 +49,10 @@
      <Compile Include="Assets\Boulder.cs" />
      <Compile Include="Assets\Catapult.cs" />
      <Compile Include="Assets\CatapultClicky.cs" />
+     <Compile Include="Assets\Dove.cs" />
      <Compile Include="Assets\Duck.cs" />
      <Compile Include="Assets\DuckDispenser.cs" />
+     <Compile Include="Assets\LosePanel.cs" />
      <Compile Include="Assets\ScoreKeeper.cs" />
      <Compile Include="Assets\Shark.cs" />
      <Compile Include="Assets\Singleton.cs" />

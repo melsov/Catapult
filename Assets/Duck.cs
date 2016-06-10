@@ -18,11 +18,10 @@ public class Duck : MonoBehaviour {
 		}
 	}
 
-	public void getHit() {
+	public virtual void getHit() {
 		gotHit = true;
 		OnGotAHit ();
 		GetComponent<Rigidbody2D> ().gravityScale = 1f;
-
-
 	}
+
 }

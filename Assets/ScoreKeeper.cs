@@ -26,4 +26,8 @@ public class ScoreKeeper : Singleton<ScoreKeeper> {
 		score += 1;
 		text.text = "" + score;
 	}
+
+	public void lose() {
+
+	}
 }

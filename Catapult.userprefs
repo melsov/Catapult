@@ -1,18 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AchievementPanel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TrophyShelf.cs">
     <Files>
-      <File FileName="Assets/CatapultClicky.cs" Line="17" Column="78" />
-      <File FileName="Assets/DuckDispenser.cs" Line="10" Column="1" />
+      <File FileName="Assets/TrophyShelf.cs" Line="1" Column="1" />
+      <File FileName="Assets/CatapultClicky.cs" Line="11" Column="1" />
+      <File FileName="Assets/AchievementPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/DuckDispenser.cs" Line="40" Column="37" />
       <File FileName="Assets/Shark.cs" Line="1" Column="1" />
-      <File FileName="Assets/Duck.cs" Line="1" Column="1" />
-      <File FileName="Assets/WorldBounds.cs" Line="7" Column="1" />
-      <File FileName="Assets/Boulder.cs" Line="1" Column="1" />
-      <File FileName="Assets/ScoreKeeper.cs" Line="23" Column="3" />
+      <File FileName="Assets/Duck.cs" Line="28" Column="37" />
+      <File FileName="Assets/WorldBounds.cs" Line="9" Column="26" />
+      <File FileName="Assets/Boulder.cs" Line="17" Column="1" />
+      <File FileName="Assets/ScoreKeeper.cs" Line="1" Column="1" />
       <File FileName="Assets/SpriteStrobe.cs" Line="1" Column="1" />
-      <File FileName="Assets/Trophy.cs" Line="17" Column="60" />
-      <File FileName="Assets/TrophyShelf.cs" Line="29" Column="23" />
-      <File FileName="Assets/AchievementPanel.cs" Line="21" Column="19" />
+      <File FileName="Assets/Trophy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Catapult.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
