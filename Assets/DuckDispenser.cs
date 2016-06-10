@@ -4,6 +4,7 @@ using System.Collections;
 public class DuckDispenser : MonoBehaviour {
 
 	public Duck originalDuck;
+	
 	public float baseFrequency = 2f;
 	private float timeSince = 0f;
 	private float frequencyMultiplier = 1f;

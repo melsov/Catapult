@@ -9,6 +9,9 @@ public class TrophyShelf : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		trophies = GetComponentsInChildren<Trophy> ();
+		foreach (Trophy t in trophies) {
+			t.GetComponentInChildren<Renderer> ().enabled = false;	
+		}
 	}
 
 	private void checkAchievements() {
@@ -17,6 +20,7 @@ public class TrophyShelf : MonoBehaviour {
 				t.achieved = true;
 				t.appear ();
 				StartCoroutine (achieve (t));
+
 			}
 		}
 	}
