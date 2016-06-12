@@ -8,16 +8,19 @@ public class Shark : MonoBehaviour {
 	protected AudioSource audioSource;
 	[SerializeField]
 	protected SpriteStrobe bgStrobe;
+    protected AudioSource neverHitAudio;
 
 	void OnEnable() {
 		Duck.OnGotAHit += celebrate;
+        Duck.OnNeverGotHit += acknowledgeNeverHit;
 	}
 
 	void OnDisable() {
 		Duck.OnGotAHit -= celebrate;
+        Duck.OnNeverGotHit -= acknowledgeNeverHit;
 	}
 
-	protected void celebrate() {
+	protected void celebrate(Boulder boulder) {
 		animator.SetBool ("Excited", true);
 		audioSource.Play ();
 		bgStrobe.strobe ();
@@ -37,9 +40,18 @@ public class Shark : MonoBehaviour {
 	public void ashamedEnded() {
 	}
 
-	void Awake () {
+    private void acknowledgeNeverHit() {
+        neverHitAudio.Play();
+    }
+
+	public void Awake () {
 		animator = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
+        foreach(AudioSource au in GetComponentsInChildren<AudioSource>()) {
+            if (au == audioSource) { continue; }
+            neverHitAudio = au;
+            break;
+        }
 	}
 	
 	void Update () {

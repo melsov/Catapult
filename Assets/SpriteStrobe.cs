@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using UnityEngine.UI;
 public class SpriteStrobe : MonoBehaviour {
 
 	SpriteRenderer sr;
+    Image image;
 	public Color strobeColor = Color.yellow;
 	private Color defaultColor;
 	// Use this for initialization
@@ -14,8 +16,10 @@ public class SpriteStrobe : MonoBehaviour {
     private int strobeOn;
 
     void Start () {
-		sr = GetComponent<SpriteRenderer> ();
-		defaultColor = sr.color;
+		//sr = GetComponent<SpriteRenderer> ();
+		//defaultColor = sr.color;
+        image = GetComponent<Image>();
+        defaultColor = image.color;
 	}
 
 	public void strobe() {
@@ -26,23 +30,12 @@ public class SpriteStrobe : MonoBehaviour {
 
     private IEnumerator strobeTime() {
         for(int i = 0; i < 12; ++i) {
-            sr.color = i % 2 == 0 ? strobeColor : defaultColor;
+            image.color =  i % 2 == 0 ? strobeColor : defaultColor;
+            //sr.color = i % 2 == 0 ? strobeColor : defaultColor;
             yield return new WaitForFixedUpdate();
-            //yield return new WaitForSeconds(strobeInterval);
         }
-        sr.color = defaultColor;
+        image.color = defaultColor;
+        //sr.color = defaultColor;
     }
-	
-	// Update is called once per frame
-	//void FixedUpdate () {
-	//	if (shouldStrobe) {
-	//		sr.color = strobeOn? strobeColor : defaultColor;
-	//		strobeOn = !strobeOn;
-	//		if (Time.fixedTime - lastStrobeTime > strobeDuration) {
-	//			shouldStrobe = false;
-	//		}
-	//	} else {
-	//		sr.color = defaultColor;
-	//	}
-	//}
+
 }

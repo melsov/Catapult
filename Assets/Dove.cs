@@ -15,8 +15,8 @@ public class Dove : Duck {
 	
 	}
 
-	public override void getHit() {
-		base.getHit ();
+	public override void getHit(Boulder boulder) {
+		base.getHit (boulder);
 
 	}
 }

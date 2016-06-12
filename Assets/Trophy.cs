@@ -9,6 +9,8 @@ public class Trophy : MonoBehaviour {
 
 	public Sprite sprite;
 
+    
+
 	public void Awake() {
 		sprite = GetComponentInChildren<SpriteRenderer> ().sprite;
 	}
@@ -16,5 +18,9 @@ public class Trophy : MonoBehaviour {
 	public void appear() {
 		GetComponentInChildren<SpriteRenderer> ().enabled = true;
 	}
+
+    public void hide() {
+        GetComponentInChildren<SpriteRenderer>().enabled = false;
+    }
 
 }
